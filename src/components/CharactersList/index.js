@@ -14,13 +14,11 @@ const CharactersList = props => {
 				{dataArr.map(character => {
 					return (
 						<li key={character.id}>
-							<h3>{character.name}</h3>
+							<CharacterCard character={character} />
 						</li>
 					);
 				})}
 			</ul>
-
-			<CharacterCard character={{}} />
 		</div>
 	);
 };
