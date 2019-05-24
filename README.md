@@ -1,11 +1,13 @@
 TO DO
 
 - [x] Set up the project, installing react, react router and node sass
+- [] Configure GitHub Page
 - [] Create project architecture (components and workflow)
 - [] Fetch API and get data
 - [] Render characters from API
 - [] Create filter section with controlled components (from App state)
 - [] Make filters logic
+- [] Styles, favicon etc
 - [] Add detail page
 - [] Review code and clean
 
