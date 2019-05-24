@@ -8,7 +8,7 @@ const CharacterCard = props => {
 	const { character } = props;
 	const { id, name, image, house } = character;
 	return (
-		<div>
+		<div className="character-card">
 			<img src={image} alt={name} />
 			<h3>{name}</h3>
 			<p>{house}</p>
