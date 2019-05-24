@@ -1,4 +1,5 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from '../../containers/HomePage';
 import CharacterDetailPage from '../../containers/CharacterDetailPage';
@@ -13,7 +14,15 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<Switch>
-					<Route exact path="/" render={() => <HomePage />} />
+					<Route
+						exact
+						path="/"
+						render={() => {
+							return (
+								<HomePage onChangeFilter={e => console.log(e)} valueFilter="" />
+							);
+						}}
+					/>
 					<Route
 						exact
 						path="/character/:characterId"
@@ -24,5 +33,7 @@ class App extends React.Component {
 		);
 	}
 }
+
+// App.propTypes = {};
 
 export default App;
