@@ -6,7 +6,7 @@ TO DO
 - [x] Fetch API and get data
 - [x] Render characters from API
 - [x] Add detail page
-- [] Create filter section with controlled components (from App state)
+- [x] Create filter section with controlled components (from App state)
 - [] Make filters logic
 - [] Styles, favicon etc
 - [] Review code and clean
