@@ -14,9 +14,7 @@ class App extends React.Component {
 				dataArr: [],
 				isFetching: true
 			},
-			filters: {
-				userValue: ''
-			}
+			filters: {}
 		};
 
 		this.handleFilterOnChange = this.handleFilterOnChange.bind(this);
@@ -27,14 +25,14 @@ class App extends React.Component {
 			this.setState((prevState, index) => {
 				return {
 					data: {
+						//Boolean for Loading text
+						isFetching: false,
 						dataArr: data.map((character, index) => {
 							return {
 								...character,
 								id: index
 							};
-						}),
-						//Boolean for Loading text
-						isFetching: false
+						})
 					}
 				};
 			});
@@ -45,12 +43,13 @@ class App extends React.Component {
 		const { currentTarget } = event;
 		const key = currentTarget.name;
 		const value = currentTarget.value;
-		console.log(key, value);
 
 		this.setState(prevState => {
 			return {
 				filters: {
-					userValue: value
+					//Doing prevState as expecting more keys in the future
+					...prevState.filters,
+					[key]: value
 				}
 			};
 		});
@@ -59,7 +58,7 @@ class App extends React.Component {
 	render() {
 		const { dataArr, isFetching } = this.state.data;
 		const { handleFilterOnChange } = this;
-		const { userValue } = this.state.filters;
+		const { name } = this.state.filters;
 		return (
 			<div className="App">
 				<Switch>
@@ -72,7 +71,7 @@ class App extends React.Component {
 									isFetching={isFetching}
 									dataArr={dataArr}
 									onChangeFilter={handleFilterOnChange}
-									valueFilter={userValue}
+									valueFilter={name}
 								/>
 							);
 						}}

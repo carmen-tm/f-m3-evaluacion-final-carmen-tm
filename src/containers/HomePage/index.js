@@ -21,7 +21,7 @@ const HomePage = props => {
 						onChangeFilter={onChangeFilter}
 						valueFilter={valueFilter}
 					/>
-					<CharactersList dataArr={dataArr} />
+					<CharactersList dataArr={dataArr} valueFilter={valueFilter} />
 				</main>
 			)}
 		</div>
@@ -32,7 +32,7 @@ HomePage.propTypes = {
 	isFetching: PropTypes.bool.isRequired,
 	dataArr: PropTypes.array.isRequired,
 	onChangeFilter: PropTypes.func.isRequired,
-	valueFilter: PropTypes.string //Not required yet
+	valueFilter: PropTypes.string.isRequired
 };
 
 export default HomePage;

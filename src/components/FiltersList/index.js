@@ -23,7 +23,7 @@ const FilterList = props => {
 
 FilterInput.propTypes = {
 	onChangeFilter: PropTypes.func.isRequired,
-	valueFilter: PropTypes.string //Not required yet
+	valueFilter: PropTypes.string.isRequired
 };
 
 export default FilterList;
