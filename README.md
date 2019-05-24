@@ -5,10 +5,10 @@ TO DO
 - [x] Create project architecture (components and workflow)
 - [x] Fetch API and get data
 - [x] Render characters from API
+- [x] Add detail page
 - [] Create filter section with controlled components (from App state)
 - [] Make filters logic
 - [] Styles, favicon etc
-- [] Add detail page
 - [] Review code and clean
 
 # Harry Potter Characters Search Engine WebApp
