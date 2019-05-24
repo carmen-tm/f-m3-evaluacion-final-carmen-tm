@@ -8,7 +8,7 @@ const HomePage = props => {
 	const { isFetching, dataArr, onChangeFilter, valueFilter } = props;
 	return (
 		<div>
-			<h2>Characters List</h2>
+			<h2>Harry Potter Characters</h2>
 			{isFetching ? (
 				//If it is fetching (true), show loading paragraph meanwhile
 				<main>
