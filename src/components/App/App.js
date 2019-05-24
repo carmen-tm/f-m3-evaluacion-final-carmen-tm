@@ -14,8 +14,12 @@ class App extends React.Component {
 				dataArr: [],
 				isFetching: true
 			},
-			filters: {}
+			filters: {
+				userValue: ''
+			}
 		};
+
+		this.handleFilterOnChange = this.handleFilterOnChange.bind(this);
 	}
 
 	componentDidMount() {
@@ -37,8 +41,25 @@ class App extends React.Component {
 		});
 	}
 
+	handleFilterOnChange(event) {
+		const { currentTarget } = event;
+		const key = currentTarget.name;
+		const value = currentTarget.value;
+		console.log(key, value);
+
+		this.setState(prevState => {
+			return {
+				filters: {
+					userValue: value
+				}
+			};
+		});
+	}
+
 	render() {
 		const { dataArr, isFetching } = this.state.data;
+		const { handleFilterOnChange } = this;
+		const { userValue } = this.state.filters;
 		return (
 			<div className="App">
 				<Switch>
@@ -50,8 +71,8 @@ class App extends React.Component {
 								<HomePage
 									isFetching={isFetching}
 									dataArr={dataArr}
-									onChangeFilter={e => console.log(e)}
-									valueFilter=""
+									onChangeFilter={handleFilterOnChange}
+									valueFilter={userValue}
 								/>
 							);
 						}}

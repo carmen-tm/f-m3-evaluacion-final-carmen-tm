@@ -9,16 +9,14 @@ const FilterList = props => {
 	return (
 		<div>
 			<h2>Filters</h2>
-			<ul>
-				<li>
-					<FilterInput
-						inputType="text"
-						name="name"
-						valueFilter={valueFilter}
-						onChangeFilter={onChangeFilter}
-					/>
-				</li>
-			</ul>
+			<form>
+				<FilterInput
+					inputType="text"
+					name="name"
+					valueFilter={valueFilter}
+					onChangeFilter={onChangeFilter}
+				/>
+			</form>
 		</div>
 	);
 };
