@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const CharacterDetailPage = props => {
-	const { dataArr, match } = props;
+	console.log(props);
+	const { isFetching, dataArr, match } = props;
 	const { characterId } = match.params;
 
 	const selectedCharacter = dataArr[characterId - 1];
@@ -13,19 +14,28 @@ const CharacterDetailPage = props => {
 	return (
 		<div>
 			<h2>Página de detalle</h2>
-			<img src={image} alt={name} />
-			<h3>{name}</h3>
-			<p>House: {house ? house : 'No data'}</p>
-			<p>Date of Birth: {dateOfBith ? dateOfBith : 'No data'}</p>
-			<p>Patronus: {patronus ? patronus : 'No data'}</p>
-			<p>Alive: {alive ? 'ALIVE' : 'DEAD'}</p>
+			{isFetching ? (
+				<main>
+					<p>Loading...</p>
+				</main>
+			) : (
+				<main>
+					<img src={image} alt={name} />
+					<h3>{name}</h3>
+					<p>House: {house ? house : 'No data'}</p>
+					<p>Date of Birth: {dateOfBith ? dateOfBith : 'No data'}</p>
+					<p>Patronus: {patronus ? patronus : 'No data'}</p>
+					<p>Alive: {alive ? 'ALIVE' : 'DEAD'}</p>
 
-			<Link to="/"> Home </Link>
+					<Link to="/"> Home </Link>
+				</main>
+			)}
 		</div>
 	);
 };
 
 CharacterDetailPage.propTypes = {
+	isFetching: PropTypes.bool.isRequired,
 	dataArr: PropTypes.array.isRequired,
 	match: PropTypes.object.isRequired
 };

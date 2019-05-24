@@ -14,7 +14,9 @@ class App extends React.Component {
 				dataArr: [],
 				isFetching: true
 			},
-			filters: {}
+			filters: {
+				value: ''
+			}
 		};
 
 		this.handleFilterOnChange = this.handleFilterOnChange.bind(this);
@@ -41,7 +43,6 @@ class App extends React.Component {
 
 	handleFilterOnChange(event) {
 		const { currentTarget } = event;
-		const key = currentTarget.name;
 		const value = currentTarget.value;
 
 		this.setState(prevState => {
@@ -49,7 +50,7 @@ class App extends React.Component {
 				filters: {
 					//Doing prevState as expecting more keys in the future
 					...prevState.filters,
-					[key]: value
+					value: value
 				}
 			};
 		});
@@ -58,7 +59,7 @@ class App extends React.Component {
 	render() {
 		const { dataArr, isFetching } = this.state.data;
 		const { handleFilterOnChange } = this;
-		const { name } = this.state.filters;
+		const { value } = this.state.filters;
 		return (
 			<div className="App">
 				<Switch>
@@ -71,7 +72,7 @@ class App extends React.Component {
 									isFetching={isFetching}
 									dataArr={dataArr}
 									onChangeFilter={handleFilterOnChange}
-									valueFilter={name}
+									valueFilter={value}
 								/>
 							);
 						}}
@@ -81,6 +82,7 @@ class App extends React.Component {
 						path="/character/:characterId"
 						render={routerProps => (
 							<CharacterDetailPage
+								isFetching={isFetching}
 								dataArr={dataArr}
 								match={routerProps.match}
 							/>

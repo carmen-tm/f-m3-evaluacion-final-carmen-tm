@@ -22,7 +22,7 @@ FilterInput.propTypes = {
 	inputType: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
 	onChangeFilter: PropTypes.func.isRequired,
-	valueFilter: PropTypes.string //Not required yet
+	valueFilter: PropTypes.string.isRequired
 };
 
 export default FilterInput;
