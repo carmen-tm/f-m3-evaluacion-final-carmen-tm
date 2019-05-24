@@ -9,7 +9,17 @@ const CharactersList = props => {
 	return (
 		<div>
 			<h2>Characters collection</h2>
-			<ul />
+
+			<ul>
+				{dataArr.map(character => {
+					return (
+						<li key={character.id}>
+							<h3>{character.name}</h3>
+						</li>
+					);
+				})}
+			</ul>
+
 			<CharacterCard character={{}} />
 		</div>
 	);
