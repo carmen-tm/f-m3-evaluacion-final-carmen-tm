@@ -19,7 +19,11 @@ class App extends React.Component {
 						path="/"
 						render={() => {
 							return (
-								<HomePage onChangeFilter={e => console.log(e)} valueFilter="" />
+								<HomePage
+									dataArr={[]}
+									onChangeFilter={e => console.log(e)}
+									valueFilter=""
+								/>
 							);
 						}}
 					/>
