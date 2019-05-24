@@ -2,13 +2,13 @@ TO DO
 
 - [x] Set up the project, installing react, react router and node sass
 - [] Configure GitHub Page
-- [x] Create project architecture (basic components and workflow)
-- [] Fetch API and get data
-- [] Render characters from API
+- [x] Create project architecture (components and workflow)
+- [x] Fetch API and get data
+- [x] Render characters from API
+- [x] Add detail page
 - [] Create filter section with controlled components (from App state)
 - [] Make filters logic
 - [] Styles, favicon etc
-- [] Add detail page
 - [] Review code and clean
 
 # Harry Potter Characters Search Engine WebApp

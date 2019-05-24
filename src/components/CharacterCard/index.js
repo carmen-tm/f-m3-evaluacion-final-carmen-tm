@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
 const CharacterCard = props => {
 	const { character } = props;
+	const { id, name, image, house } = character;
 	return (
 		<div>
-			<p>Soy una carta</p>
-			{/* <p>{character}</p> */}
+			<img src={image} alt={name} />
+			<h3>{name}</h3>
+			<p>{house}</p>
+
+			<Link to={`/character/${id}`}> Página detalle </Link>
 		</div>
 	);
 };
-
-{
-	/* <Link to="/character/ej"> Página detalle </Link> */
-}
 
 CharacterCard.propTypes = {
 	character: PropTypes.object.isRequired
