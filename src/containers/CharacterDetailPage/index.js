@@ -7,8 +7,7 @@ const CharacterDetailPage = props => {
 	const { dataArr, match } = props;
 	const { characterId } = match.params;
 
-	const selectedCharacter = dataArr[characterId];
-	console.log(selectedCharacter);
+	const selectedCharacter = dataArr[characterId - 1];
 	const { name, image, house, dateOfBith, patronus, alive } = selectedCharacter;
 
 	return (

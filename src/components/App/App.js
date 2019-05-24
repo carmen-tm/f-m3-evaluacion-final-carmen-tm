@@ -30,7 +30,7 @@ class App extends React.Component {
 						dataArr: data.map((character, index) => {
 							return {
 								...character,
-								id: index
+								id: index + 1
 							};
 						})
 					}
