@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const CharacterDetailPage = props => {
-	console.log(props);
 	const { isFetching, dataArr, match } = props;
 	const { characterId } = match.params;
 
 	const selectedCharacter = dataArr[characterId - 1];
-	const { name, image, house, dateOfBith, patronus, alive } = selectedCharacter;
 
 	return (
 		<div>
@@ -20,12 +18,25 @@ const CharacterDetailPage = props => {
 				</main>
 			) : (
 				<main>
-					<img src={image} alt={name} />
-					<h3>{name}</h3>
-					<p>House: {house ? house : 'No data'}</p>
-					<p>Date of Birth: {dateOfBith ? dateOfBith : 'No data'}</p>
-					<p>Patronus: {patronus ? patronus : 'No data'}</p>
-					<p>Alive: {alive ? 'ALIVE' : 'DEAD'}</p>
+					<img src={selectedCharacter.image} alt={selectedCharacter.name} />
+					<h3>{selectedCharacter.name}</h3>
+					<p>
+						House:{' '}
+						{selectedCharacter.house ? selectedCharacter.house : 'No data'}
+					</p>
+					<p>
+						Date of Birth:{' '}
+						{selectedCharacter.dateOfBith
+							? selectedCharacter.dateOfBith
+							: 'No data'}
+					</p>
+					<p>
+						Patronus:{' '}
+						{selectedCharacter.patronus
+							? selectedCharacter.patronus
+							: 'No data'}
+					</p>
+					<p>Alive: {selectedCharacter.alive ? 'ALIVE' : 'DEAD'}</p>
 
 					<Link to="/"> Home </Link>
 				</main>
