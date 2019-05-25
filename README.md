@@ -8,9 +8,9 @@ TODO (General)
 - [x] Add detail page
 - [x] Create filter section with controlled components (from App state)
 - [x] Make filters logic
+- [x] Add components diagram
 - [/] Styles, favicon etc
 - [] Review code and clean
-- [] Add components diagram
 - [] Clean README
 
 TODO (extra)
@@ -49,6 +49,11 @@ You are more than welcome to contribute to this code with any new ideas and/or s
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ......CSS MODULES, SASS
+
+### Components workflow diagram
+
+![DIAGRAM](/src/images/HarryPotterWebApp-diagram_v01.png)
+[link to diagram](https://creately.com/diagram/jw3pl27b1/b7NK5ZzRbniyFhGDOjMo6tPoGA%3D)
 
 ## License
 
