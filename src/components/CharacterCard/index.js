@@ -13,7 +13,7 @@ const CharacterCard = props => {
 			<h3>{name}</h3>
 			<p>{house}</p>
 
-			<Link to={`/character/${id}`}> Página detalle </Link>
+			<Link to={`/character-detail/${id}`}> Página detalle </Link>
 		</div>
 	);
 };

@@ -7,7 +7,12 @@ const CharacterDetailPage = props => {
 	const { isFetching, dataArr, match } = props;
 	const { characterId } = match.params;
 
-	const selectedCharacter = dataArr[characterId - 1];
+	const getSelectedCharacter = characterId => {
+		return dataArr.find(character => character.id === parseInt(characterId));
+	};
+
+	//Another way
+	// const selectedCharacter = dataArr[characterId - 1];
 
 	return (
 		<div>
@@ -18,25 +23,32 @@ const CharacterDetailPage = props => {
 				</main>
 			) : (
 				<main>
-					<img src={selectedCharacter.image} alt={selectedCharacter.name} />
-					<h3>{selectedCharacter.name}</h3>
+					<img
+						src={getSelectedCharacter(characterId).image}
+						alt={getSelectedCharacter(characterId).name}
+					/>
+					<h3>{getSelectedCharacter(characterId).name}</h3>
 					<p>
 						House:{' '}
-						{selectedCharacter.house ? selectedCharacter.house : 'No data'}
+						{getSelectedCharacter(characterId).house
+							? getSelectedCharacter(characterId).house
+							: 'No data'}
 					</p>
 					<p>
 						Date of Birth:{' '}
-						{selectedCharacter.dateOfBith
-							? selectedCharacter.dateOfBith
+						{getSelectedCharacter(characterId).dateOfBith
+							? getSelectedCharacter(characterId).dateOfBith
 							: 'No data'}
 					</p>
 					<p>
 						Patronus:{' '}
-						{selectedCharacter.patronus
-							? selectedCharacter.patronus
+						{getSelectedCharacter(characterId).patronus
+							? getSelectedCharacter(characterId).patronus
 							: 'No data'}
 					</p>
-					<p>Alive: {selectedCharacter.alive ? 'ALIVE' : 'DEAD'}</p>
+					<p>
+						Alive: {getSelectedCharacter(characterId).alive ? 'ALIVE' : 'DEAD'}
+					</p>
 
 					<Link to="/"> Home </Link>
 				</main>
