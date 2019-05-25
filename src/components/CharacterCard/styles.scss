@@ -1,7 +1,34 @@
+.character-card__link {
+	text-decoration: none;
+	color: inherit;
+}
+
 .character-card {
-	background-color: pink;
-	margin: 30px;
-	border-radius: 30px;
-	padding: 10px;
+	background-color: white;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	margin: 0 10px;
+	padding-bottom: 10px;
 	width: 200px;
+
+	&__img {
+		width: 100%;
+		height: 250px;
+		//Similar to bcg-position controls, but with image tag
+		object-fit: cover;
+		object-position: top;
+	}
+
+	&__title {
+		// color: red;
+		margin-bottom: 20px;
+	}
+
+	&__info {
+		// color: blue;
+	}
+
+	transition: all ease 600ms;
+	&:hover {
+		transform: scale(1.05);
+	}
 }

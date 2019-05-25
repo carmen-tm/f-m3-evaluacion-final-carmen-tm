@@ -7,10 +7,8 @@ import './styles.scss';
 const CharactersList = props => {
 	const { dataArr, valueFilter } = props;
 	return (
-		<div>
-			<h2>Characters collection</h2>
-
-			<ul>
+		<section>
+			<ul className="character-list">
 				{dataArr
 					.filter(character => {
 						return valueFilter
@@ -25,7 +23,7 @@ const CharactersList = props => {
 						);
 					})}
 			</ul>
-		</div>
+		</section>
 	);
 };
 

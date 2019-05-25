@@ -8,15 +8,23 @@ const CharacterCard = props => {
 	const { character } = props;
 	const { id, name, image, house } = character;
 	return (
-		<div className="character-card">
-			<Link to={`/character-detail/${id}`} title="Show more info">
-				<img src={image} alt={name} />
-				<h3>{name}</h3>
-				<p>{house}</p>
-			</Link>
-
-			{/* <Link to={`/character-detail/${id}`}> Página detalle </Link> */}
-		</div>
+		<Link
+			to={`/character-detail/${id}`}
+			title="Show more info"
+			className="character-card__link"
+		>
+			<div className="character-card">
+				<header>
+					<img className="character-card__img" src={image} alt={name} />
+				</header>
+				<main>
+					<h3 className="character-card__title">{name}</h3>
+					<p className="character-card__info">
+						{house ? house : <span>&nbsp;&nbsp;</span>}
+					</p>
+				</main>
+			</div>
+		</Link>
 	);
 };
 

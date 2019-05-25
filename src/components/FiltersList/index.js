@@ -7,9 +7,8 @@ const FilterList = props => {
 	const { onChangeFilter, valueFilter } = props;
 
 	return (
-		<div>
-			<h2>Filters</h2>
-			<form>
+		<aside>
+			<form className="characters-filters">
 				<FilterInput
 					inputType="text"
 					name="name"
@@ -17,7 +16,7 @@ const FilterList = props => {
 					onChangeFilter={onChangeFilter}
 				/>
 			</form>
-		</div>
+		</aside>
 	);
 };
 

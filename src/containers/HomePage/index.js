@@ -4,18 +4,35 @@ import FiltersList from '../../components/FiltersList';
 import CharactersList from '../../components/CharactersList';
 import './styles.scss';
 
+//Replace vertical scroll by horizontal scroll with just vanilla javascript
+function handleReplaceVerticalScroll(event) {
+	// The deltaY property returns a positive value when scrolling down, and a negative value when scrolling up, otherwise 0
+	//If truthy (there is scroll..)
+	if (event.deltaY) {
+		// manually scroll horizonally instead
+		window.scroll(window.scrollX + event.deltaY * 5, window.scrollY);
+	}
+	//Otherwise (no vertical scroll) do nothing
+	return;
+}
+
+//Listener on window element
+window.addEventListener('wheel', handleReplaceVerticalScroll);
+
 const HomePage = props => {
 	const { isFetching, dataArr, onChangeFilter, valueFilter } = props;
 	return (
-		<div>
-			<h1>Harry Potter Characters</h1>
+		<React.Fragment>
+			<header>
+				<h1 className="App__title">Harry Potter Characters</h1>
+			</header>
 			{isFetching ? (
 				//If it is fetching(T), show loading paragraph
 				<main>
 					<p>Loading...</p>
 				</main>
 			) : (
-				<main>
+				<main className="App__container">
 					<FiltersList
 						dataArr={dataArr}
 						onChangeFilter={onChangeFilter}
@@ -24,7 +41,7 @@ const HomePage = props => {
 					<CharactersList dataArr={dataArr} valueFilter={valueFilter} />
 				</main>
 			)}
-		</div>
+		</React.Fragment>
 	);
 };
 

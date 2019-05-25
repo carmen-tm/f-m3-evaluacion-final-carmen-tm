@@ -6,7 +6,7 @@ const FilterInput = props => {
 	const { inputType, name, onChangeFilter, valueFilter } = props;
 	return (
 		<div>
-			<label htmlFor={name}>{name.toUpperCase()} </label>
+			<label htmlFor={name}>{`Filter by ${name}: `} </label>
 			<input
 				type={inputType}
 				name={name}

@@ -1,0 +1,13 @@
+.character-list {
+	list-style: none;
+
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+
+	// overflow-x: auto;
+
+	// &::-webkit-scrollbar {
+	// 	display: none;
+	// }
+}
