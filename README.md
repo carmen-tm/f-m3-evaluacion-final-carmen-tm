@@ -10,6 +10,7 @@ TODO (General)
 - [x] Make filters logic
 - [/] Styles, favicon etc
 - [] Review code and clean
+- [] Add components diagram
 - [] Clean README
 
 TODO (extra)
@@ -18,6 +19,18 @@ TODO (extra)
 - [] Implement Modules CSS
 - [] Mediaqueries for mobile size (simple flex, not horizontal scroll)
 - [] Link images from [Harry Potter wiki](https://harrypotter.fandom.com/wiki/Main_Page) or similar.
+
+USEFUL FOR THE PROJECT (vanilla JavaScript)
+
+Technically
+
+- [Labels and a11y](https://a11yproject.com/posts/how-to-hide-content/)
+- [Replace vertical scroll with horizontal](https://stackoverflow.com/questions/47443850/replace-vertical-scroll-by-horizontal-scroll-vanilla-javascript)
+- [Flex-basis transition](https://codepen.io/thomas-eilermann/pen/grjEjE)
+
+Visually
+
+- [horizontal display](https://digitaldosis.com/works)
 
 # Harry Potter Characters Search Engine WebApp
 
