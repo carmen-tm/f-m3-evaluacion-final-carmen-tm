@@ -9,11 +9,13 @@ const CharacterCard = props => {
 	const { id, name, image, house } = character;
 	return (
 		<div className="character-card">
-			<img src={image} alt={name} />
-			<h3>{name}</h3>
-			<p>{house}</p>
+			<Link to={`/character-detail/${id}`} title="Show more info">
+				<img src={image} alt={name} />
+				<h3>{name}</h3>
+				<p>{house}</p>
+			</Link>
 
-			<Link to={`/character-detail/${id}`}> Página detalle </Link>
+			{/* <Link to={`/character-detail/${id}`}> Página detalle </Link> */}
 		</div>
 	);
 };
