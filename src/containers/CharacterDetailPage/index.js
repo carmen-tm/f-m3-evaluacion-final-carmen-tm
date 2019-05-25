@@ -38,23 +38,24 @@ const CharacterDetailPage = props => {
 							House:{' '}
 							{getSelectedCharacter(characterId).house
 								? getSelectedCharacter(characterId).house
-								: 'No data'}
+								: '(No data)'}
 						</p>
 						<p>
 							Date of Birth:{' '}
 							{getSelectedCharacter(characterId).dateOfBith
 								? getSelectedCharacter(characterId).dateOfBith
-								: 'No data'}
+								: '(No data)'}
 						</p>
 						<p>
 							Patronus:{' '}
 							{getSelectedCharacter(characterId).patronus
 								? getSelectedCharacter(characterId).patronus
-								: 'No data'}
+								: '(No data)'}
 						</p>
 						<p>
-							Alive:{' '}
-							{getSelectedCharacter(characterId).alive ? 'ALIVE' : 'DEAD'}
+							{getSelectedCharacter(characterId).alive
+								? 'Alive at the end of the saga'
+								: 'Dead at the end of the saga'}
 						</p>
 					</section>
 				</main>
