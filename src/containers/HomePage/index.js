@@ -11,9 +11,6 @@ function handleReplaceVerticalScroll(event) {
 	if (event.deltaY) {
 		// manually scroll horizonally instead
 		window.scroll(window.scrollX + event.deltaY * 5, window.scrollY);
-
-		// prevent vertical scroll
-		event.preventDefault();
 	}
 	//Otherwise (no vertical scroll) do nothing
 	return;

@@ -15,7 +15,7 @@ const CharacterDetailPage = props => {
 	// const selectedCharacter = dataArr[characterId - 1];
 
 	return (
-		<div>
+		<div className="App__detail">
 			<header>
 				<Link to="/"> Home </Link>
 				<h2>Página de detalle</h2>
@@ -25,7 +25,7 @@ const CharacterDetailPage = props => {
 					<p>Loading...</p>
 				</main>
 			) : (
-				<main className="detail-page">
+				<main className="detail-main">
 					<aside>
 						<img
 							src={getSelectedCharacter(characterId).image}

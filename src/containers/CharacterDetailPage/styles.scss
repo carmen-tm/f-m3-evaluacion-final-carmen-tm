@@ -1,3 +1,8 @@
-.detail-page {
-	display: flex;
+//Forcing fixed position to fix detail page scrollX issue
+.App__detail {
+	position: fixed;
 }
+
+// .detail-main {
+// 	display: flex;
+// }
