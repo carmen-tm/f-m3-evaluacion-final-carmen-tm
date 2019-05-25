@@ -1,15 +1,23 @@
-TO DO
+TODO (General)
 
 - [x] Set up the project, installing react, react router and node sass
-- [] Configure GitHub Page
+- [x] Configure GitHub Page
 - [x] Create project architecture (components and workflow)
 - [x] Fetch API and get data
 - [x] Render characters from API
 - [x] Add detail page
 - [x] Create filter section with controlled components (from App state)
 - [x] Make filters logic
-- [] Styles, favicon etc
+- [/] Styles, favicon etc
 - [] Review code and clean
+- [] Clean README
+
+TODO (extra)
+
+- [] Try more filters (for example: families with checkboxs)
+- [] Implement Modules CSS
+- [] Mediaqueries for mobile size (simple flex, not horizontal scroll)
+- [] Link images from [Harry Potter wiki](https://harrypotter.fandom.com/wiki/Main_Page) or similar.
 
 # Harry Potter Characters Search Engine WebApp
 
