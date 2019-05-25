@@ -9,6 +9,7 @@ const FilterList = props => {
 	return (
 		<aside>
 			<form className="characters-filters">
+				<legend>Search your favourite character</legend>
 				<FilterInput
 					inputType="text"
 					name="name"

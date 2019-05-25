@@ -6,13 +6,16 @@ const FilterInput = props => {
 	const { inputType, name, onChangeFilter, valueFilter } = props;
 	return (
 		<div>
-			<label htmlFor={name}>{`Filter by ${name}: `} </label>
+			<label htmlFor={name} className="visually-hidden">
+				{name}
+			</label>
 			<input
 				type={inputType}
 				name={name}
 				id={name}
 				onChange={onChangeFilter}
 				value={valueFilter}
+				placeholder={name}
 			/>
 		</div>
 	);

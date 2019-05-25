@@ -9,6 +9,7 @@
 	margin: 0 10px;
 	padding-bottom: 10px;
 	width: 200px;
+	text-align: center;
 
 	&__img {
 		width: 100%;
@@ -29,6 +30,6 @@
 
 	transition: all ease 600ms;
 	&:hover {
-		transform: scale(1.05);
+		transform: scale(1.1);
 	}
 }

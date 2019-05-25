@@ -16,41 +16,47 @@ const CharacterDetailPage = props => {
 
 	return (
 		<div>
-			<h2>Página de detalle</h2>
+			<header>
+				<Link to="/"> Home </Link>
+				<h2>Página de detalle</h2>
+			</header>
 			{isFetching ? (
 				<main>
 					<p>Loading...</p>
 				</main>
 			) : (
-				<main>
-					<img
-						src={getSelectedCharacter(characterId).image}
-						alt={getSelectedCharacter(characterId).name}
-					/>
-					<h3>{getSelectedCharacter(characterId).name}</h3>
-					<p>
-						House:{' '}
-						{getSelectedCharacter(characterId).house
-							? getSelectedCharacter(characterId).house
-							: 'No data'}
-					</p>
-					<p>
-						Date of Birth:{' '}
-						{getSelectedCharacter(characterId).dateOfBith
-							? getSelectedCharacter(characterId).dateOfBith
-							: 'No data'}
-					</p>
-					<p>
-						Patronus:{' '}
-						{getSelectedCharacter(characterId).patronus
-							? getSelectedCharacter(characterId).patronus
-							: 'No data'}
-					</p>
-					<p>
-						Alive: {getSelectedCharacter(characterId).alive ? 'ALIVE' : 'DEAD'}
-					</p>
-
-					<Link to="/"> Home </Link>
+				<main className="detail-page">
+					<aside>
+						<img
+							src={getSelectedCharacter(characterId).image}
+							alt={getSelectedCharacter(characterId).name}
+						/>
+					</aside>
+					<section>
+						<h3>{getSelectedCharacter(characterId).name}</h3>
+						<p>
+							House:{' '}
+							{getSelectedCharacter(characterId).house
+								? getSelectedCharacter(characterId).house
+								: 'No data'}
+						</p>
+						<p>
+							Date of Birth:{' '}
+							{getSelectedCharacter(characterId).dateOfBith
+								? getSelectedCharacter(characterId).dateOfBith
+								: 'No data'}
+						</p>
+						<p>
+							Patronus:{' '}
+							{getSelectedCharacter(characterId).patronus
+								? getSelectedCharacter(characterId).patronus
+								: 'No data'}
+						</p>
+						<p>
+							Alive:{' '}
+							{getSelectedCharacter(characterId).alive ? 'ALIVE' : 'DEAD'}
+						</p>
+					</section>
 				</main>
 			)}
 		</div>
