@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Loading from '../../components/Loading';
+
 import './styles.scss';
 
 class CharacterDetailPage extends React.Component {
@@ -25,12 +27,10 @@ class CharacterDetailPage extends React.Component {
 			<div className="App__detail">
 				<header>
 					<Link to="/"> Home </Link>
-					<h2>Página de detalle</h2>
 				</header>
 				{isFetching ? (
-					<main>
-						<p>Loading...</p>
-					</main>
+					//If it is fetching(T), show loading component
+					<Loading />
 				) : (
 					<main className="detail-main">
 						<aside>
@@ -40,7 +40,12 @@ class CharacterDetailPage extends React.Component {
 							/>
 						</aside>
 						<section>
-							<h3>{getSelectedCharacter(characterId).name}</h3>
+							<header className="detail__header">
+								<h2 className="detail__title">
+									{getSelectedCharacter(characterId).name}
+								</h2>
+							</header>
+							{/* <h3>{getSelectedCharacter(characterId).name}</h3> */}
 							<p>
 								House:{' '}
 								{getSelectedCharacter(characterId).house

@@ -2,9 +2,9 @@
 	position: fixed;
 	margin-top: 30px;
 	width: 400px;
+
 	left: 50%;
-	transform: translateX(-50%);
-	transform: skewX(-30deg);
+	transform: translate(-50%, 0%) skewX(-30deg);
 	background-color: black;
 }
 .App__title {

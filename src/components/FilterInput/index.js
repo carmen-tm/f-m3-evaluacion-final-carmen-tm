@@ -10,12 +10,13 @@ const FilterInput = props => {
 				{name}
 			</label>
 			<input
+				className="filter-input"
 				type={inputType}
 				name={name}
 				id={name}
 				onChange={onChangeFilter}
 				value={valueFilter}
-				placeholder={name}
+				placeholder={`${name}...`}
 			/>
 		</div>
 	);

@@ -44,6 +44,7 @@ class App extends React.Component {
 
 	handleFilterOnChange(event) {
 		const { currentTarget } = event;
+		currentTarget.classList.toggle('filter-input-focused');
 		const value = currentTarget.value;
 
 		this.setState(prevState => {

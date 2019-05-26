@@ -3,6 +3,23 @@
 	position: fixed;
 }
 
-// .detail-main {
-// 	display: flex;
-// }
+.detail__header {
+	// width: 400px;
+	transform: skewX(-30deg);
+	background-color: black;
+}
+//TODO put the info aside to the foto
+//TODO improve home
+
+.detail__title {
+	font-family: 'magic_school_oneregular';
+	font-size: 26px;
+	font-weight: normal;
+	font-style: normal;
+	text-align: center;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	padding: 5px 20px;
+	color: white;
+	transform: skewX(30deg);
+}

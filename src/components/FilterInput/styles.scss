@@ -16,3 +16,17 @@
 		height: auto;
 	}
 }
+
+.filter-input {
+	border: 0;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	// border-bottom: 2px solid white;
+	background-color: inherit;
+	width: 60px;
+	transition: all 1s ease-in;
+
+	&:focus {
+		width: 150px;
+	}
+}

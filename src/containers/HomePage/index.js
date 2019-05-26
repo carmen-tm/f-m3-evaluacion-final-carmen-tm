@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FiltersList from '../../components/FiltersList';
 import CharactersList from '../../components/CharactersList';
+import Loading from '../../components/Loading';
 import './styles.scss';
 
 window.scrollTo(500, 500);
@@ -27,13 +28,11 @@ const HomePage = props => {
 	return (
 		<React.Fragment>
 			<header className="App__header">
-				<h1 className="App__title">Harry Potter Characters</h1>
+				<h1 className="App__title">Harry Potter Characters!</h1>
 			</header>
 			{isFetching ? (
-				//If it is fetching(T), show loading paragraph
-				<main>
-					<p>Loading...</p>
-				</main>
+				//If it is fetching(T), show loading component
+				<Loading />
 			) : (
 				<main className="App__container">
 					<FiltersList

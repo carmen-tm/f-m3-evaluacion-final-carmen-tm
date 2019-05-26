@@ -10,12 +10,14 @@ TODO (General)
 - [x] Make filters logic
 - [x] Add components diagram
 - [/] Styles, favicon, fonts etc
+- [ ] Improve filter logic (if no results, show a message)
 - [] Review code and clean
 - [] Clean README
 
 TODO (extra)
 
 - [] Try more filters (for example: families with checkboxs)
+- [] Improve loading component
 - [] Implement Modules CSS
 - [] Mediaqueries for mobile size (simple flex, not horizontal scroll)
 - [] Link images from [Harry Potter wiki](https://harrypotter.fandom.com/wiki/Main_Page) or similar.
@@ -30,6 +32,7 @@ Technically
 - [Using Web Fonts](https://www.w3schools.com/css/css3_fonts.asp)
   [more here](https://www.balbooa.com/knowledgebase/32-documentation-faq-joomla/176-how-to-add-custom-font-to-website-through-fontface)
 - [CSS Animations](http://leaverou.github.io/animatable/)
+- [React transitions](https://blog.jakoblind.no/react-animation-example/)
 
 Visually
 
