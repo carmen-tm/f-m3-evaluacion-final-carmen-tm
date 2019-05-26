@@ -9,7 +9,7 @@ TODO (General)
 - [x] Create filter section with controlled components (from App state)
 - [x] Make filters logic
 - [x] Add components diagram
-- [/] Styles, favicon etc
+- [/] Styles, favicon, fonts etc
 - [] Review code and clean
 - [] Clean README
 
@@ -27,6 +27,9 @@ Technically
 - [Labels and a11y](https://a11yproject.com/posts/how-to-hide-content/)
 - [Replace vertical scroll with horizontal](https://stackoverflow.com/questions/47443850/replace-vertical-scroll-by-horizontal-scroll-vanilla-javascript)
 - [Flex-basis transition](https://codepen.io/thomas-eilermann/pen/grjEjE)
+- [Using Web Fonts](https://www.w3schools.com/css/css3_fonts.asp)
+  [more here](https://www.balbooa.com/knowledgebase/32-documentation-faq-joomla/176-how-to-add-custom-font-to-website-through-fontface)
+- [CSS Animations](http://leaverou.github.io/animatable/)
 
 Visually
 

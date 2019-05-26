@@ -6,6 +6,28 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: 'magic_school_oneregular';
+	src: url('./fonts/magicschoolone-webfont.woff2') format('woff2'),
+		url('./fonts/magicschoolone-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+	font-family: 'magic_school_tworegular';
+	src: url('./fonts/magicschooltwo-webfont.woff2') format('woff2'),
+		url('./fonts/magicschooltwo-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	line-height: 10px;
 	line-height: 1.4;
