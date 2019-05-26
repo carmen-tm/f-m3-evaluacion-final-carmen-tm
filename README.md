@@ -30,7 +30,7 @@ Technically
 - [Replace vertical scroll with horizontal](https://stackoverflow.com/questions/47443850/replace-vertical-scroll-by-horizontal-scroll-vanilla-javascript)
 - [Flex-basis transition](https://codepen.io/thomas-eilermann/pen/grjEjE)
 - [Using Web Fonts](https://www.w3schools.com/css/css3_fonts.asp)
-  [more here](https://www.balbooa.com/knowledgebase/32-documentation-faq-joomla/176-how-to-add-custom-font-to-website-through-fontface)
+- [more here](https://www.balbooa.com/knowledgebase/32-documentation-faq-joomla/176-how-to-add-custom-font-to-website-through-fontface)
 - [CSS Animations](http://leaverou.github.io/animatable/)
 - [React transitions](https://blog.jakoblind.no/react-animation-example/)
 
