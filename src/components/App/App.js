@@ -20,6 +20,7 @@ class App extends React.Component {
 		};
 
 		this.handleFilterOnChange = this.handleFilterOnChange.bind(this);
+		this.resetFiltersState = this.resetFiltersState.bind(this);
 	}
 
 	componentDidMount() {
@@ -56,9 +57,20 @@ class App extends React.Component {
 		});
 	}
 
+	resetFiltersState() {
+		this.setState(prevState => {
+			return {
+				filters: {
+					...prevState.filters,
+					value: ''
+				}
+			};
+		});
+	}
+
 	render() {
 		const { dataArr, isFetching } = this.state.data;
-		const { handleFilterOnChange } = this;
+		const { handleFilterOnChange, resetFiltersState } = this;
 		const { value } = this.state.filters;
 		return (
 			<div className="App">
@@ -83,6 +95,7 @@ class App extends React.Component {
 						render={routerProps => (
 							<CharacterDetailPage
 								isFetching={isFetching}
+								resetFiltersState={resetFiltersState}
 								dataArr={dataArr}
 								match={routerProps.match}
 							/>
