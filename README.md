@@ -34,6 +34,8 @@ Technically
 - [more here](https://www.balbooa.com/knowledgebase/32-documentation-faq-joomla/176-how-to-add-custom-font-to-website-through-fontface)
 - [CSS Animations](http://leaverou.github.io/animatable/)
 - [React transitions](https://blog.jakoblind.no/react-animation-example/)
+- [Front-awesome for React](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+- [React cheatsheet](https://fontawesome.com/cheatsheet?from=io)
 
 Visually
 

@@ -5,6 +5,18 @@ import Loading from '../../components/Loading';
 
 import './styles.scss';
 
+//For using awesome fonts directly
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faHeart,
+	faSkull,
+	faSkullCrossbones,
+	faScroll,
+	faBirthdayCake
+} from '@fortawesome/free-solid-svg-icons';
+library.add(faHeart, faSkull, faSkullCrossbones, faScroll, faBirthdayCake);
+
 class CharacterDetailPage extends React.Component {
 	componentWillUnmount() {
 		this.props.resetFiltersState();
@@ -59,23 +71,50 @@ class CharacterDetailPage extends React.Component {
 									? getSelectedCharacter(characterId).house
 									: '(No data)'}
 							</p>
-							<p>
-								Date of Birth:{' '}
+							<div>
+								<span>
+									<FontAwesomeIcon icon="birthday-cake" />
+								</span>
+								<span> Date of Birth: </span>
 								{getSelectedCharacter(characterId).dateOfBith
 									? getSelectedCharacter(characterId).dateOfBith
 									: '(No data)'}
-							</p>
+							</div>
 							<p>
 								Patronus:{' '}
 								{getSelectedCharacter(characterId).patronus
 									? getSelectedCharacter(characterId).patronus
 									: '(No data)'}
 							</p>
-							<p>
+							{/* <span className="awesome-font">
+								<FontAwesomeIcon icon="heart" />
+								<FontAwesomeIcon icon="scroll" />
+								<FontAwesomeIcon icon="birthday-cake" />
+								<FontAwesomeIcon icon="skull-crossbones" />
+								<FontAwesomeIcon icon="skull" />
+							</span> */}
+							<div>
+								{getSelectedCharacter(characterId).alive ? (
+									<div>
+										<span>
+											<FontAwesomeIcon icon="heart" />
+										</span>
+										<span> Alive at the end of the saga</span>
+									</div>
+								) : (
+									<div>
+										<span>
+											<FontAwesomeIcon icon="skull-crossbones" />
+										</span>
+										<span> Dead at the end of the saga</span>
+									</div>
+								)}
+							</div>
+							{/* <p>
 								{getSelectedCharacter(characterId).alive
 									? 'Alive at the end of the saga'
 									: 'Dead at the end of the saga'}
-							</p>
+							</p> */}
 						</section>
 					</main>
 				)}
