@@ -38,14 +38,14 @@ const CharacterCard = props => {
 				</header>
 				<main>
 					<h3 className="character-card__title">{name}</h3>
-					<p className="character-card__info">
-						{house ? house : <span>&nbsp;&nbsp;</span>}
-					</p>
 					<img
 						className="character-card__house"
 						src={getHouseLogo(house)}
 						alt={house}
 					/>
+					<p className="character-card__house-animation">
+						{house ? house : <span>&nbsp;&nbsp;</span>}
+					</p>
 				</main>
 			</div>
 		</Link>
