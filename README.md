@@ -13,6 +13,7 @@ You are more than welcome to contribute to this code with any new ideas and/or s
 ## Technology
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It also uses [Front-awesome library for React](https://fontawesome.com/how-to-use/on-the-web/using-with/react).
 
 ### Components workflow diagram
 
