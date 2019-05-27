@@ -25,23 +25,30 @@ class CharacterDetailPage extends React.Component {
 
 		return (
 			<div className="App__detail">
-				<header>
-					<Link to="/"> Home </Link>
+				<header className="detail__header">
+					<Link
+						to="/"
+						className="detail__title"
+						title="Back to the Characters list"
+					>
+						{'...Home'}
+					</Link>
 				</header>
 				{isFetching ? (
 					//If it is fetching(T), show loading component
 					<Loading />
 				) : (
 					<main className="detail-main">
-						<aside>
+						<aside className="detail-main__aside-left">
 							<img
+								className="detail-main__image"
 								src={getSelectedCharacter(characterId).image}
 								alt={getSelectedCharacter(characterId).name}
 							/>
 						</aside>
-						<section>
-							<header className="detail__header">
-								<h2 className="detail__title">
+						<section className="detail-main__section-right">
+							<header>
+								<h2 className="character__title">
 									{getSelectedCharacter(characterId).name}
 								</h2>
 							</header>

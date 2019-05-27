@@ -4,22 +4,62 @@
 }
 
 .detail__header {
-	// width: 400px;
-	transform: skewX(-30deg);
+	width: 190px;
+	margin-top: 30px;
+	// margin-left: 30px;
+	// transform: skewX(-30deg);
 	background-color: black;
+	margin-bottom: 50px;
 }
-//TODO put the info aside to the foto
-//TODO improve home
 
 .detail__title {
 	font-family: 'magic_school_oneregular';
-	font-size: 26px;
+	font-size: 66px;
 	font-weight: normal;
 	font-style: normal;
-	text-align: center;
-	line-height: 1;
+	text-decoration: none;
 	-webkit-font-smoothing: antialiased;
 	padding: 5px 20px;
 	color: white;
-	transform: skewX(30deg);
+	// transform: skewX(30deg);
+}
+
+.detail-main__image {
+	margin: 0 auto;
+	height: 400px;
+	//Similar to bcg-position controls, but with image tag
+	object-fit: cover;
+	object-position: top;
+}
+
+////////
+
+.character__title {
+	font-size: 26px;
+	padding-bottom: 20px;
+}
+
+.detail-main {
+	background-color: white;
+	width: 100%;
+	max-width: 1200px;
+	margin: 30px;
+
+	@media all and (min-width: 768px) {
+		display: flex;
+		// margin: 0 auto;
+		left: 50%;
+		transform: translate(50%, 0%);
+	}
+
+	&__aside-left {
+		@media all and (min-width: 768px) {
+			flex-basis: 250px;
+		}
+		margin-right: 50px;
+		background-color: pink;
+	}
+	&__section-right {
+		background-color: yellow;
+	}
 }

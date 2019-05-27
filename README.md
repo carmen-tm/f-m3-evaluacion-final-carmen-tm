@@ -12,6 +12,7 @@ TODO (General)
 - [/] Styles, favicon, fonts etc
 - [ ] Improve filter logic (if no results, show a message)
 - [] Review code and clean
+- [] Update components diagram with last version
 - [] Clean README
 
 TODO (extra)
