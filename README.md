@@ -9,7 +9,7 @@ TODO (General)
 - [x] Create filter section with controlled components (from App state)
 - [x] Make filters logic
 - [x] Add components diagram
-- [/] Styles, favicon, fonts etc
+- [x] Styles, favicon, fonts etc
 - [ ] Improve filter logic (if no results, show a message)
 - [] Review code and clean
 - [] Update components diagram with last version
@@ -19,8 +19,9 @@ TODO (extra)
 
 - [] Try more filters (for example: families with checkboxs)
 - [] Improve loading component
-- [] Implement Modules CSS
+- [] Buttons for next/prev character
 - [] Mediaqueries for mobile size (simple flex, not horizontal scroll)
+- [] Implement Modules CSS
 - [] Link images from [Harry Potter wiki](https://harrypotter.fandom.com/wiki/Main_Page) or similar.
 
 USEFUL FOR THE PROJECT (vanilla JavaScript)
