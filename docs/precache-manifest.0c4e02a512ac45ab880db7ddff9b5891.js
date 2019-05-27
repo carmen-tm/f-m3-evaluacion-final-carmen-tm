@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e7f4292ef755b9f3875ca5a417ed1369",
+    "revision": "a7bb520f69a1b9deae3373204c529e49",
     "url": "./index.html"
   },
   {
-    "revision": "91d90ea6385a83c6d795",
-    "url": "./static/css/main.7901523f.chunk.css"
+    "revision": "1595b8fc720f448538ec",
+    "url": "./static/css/main.a4faa262.chunk.css"
   },
   {
-    "revision": "a92ae53e28c985979877",
-    "url": "./static/js/2.fee72127.chunk.js"
+    "revision": "29e9291b6129eae89152",
+    "url": "./static/js/2.31554613.chunk.js"
   },
   {
-    "revision": "91d90ea6385a83c6d795",
-    "url": "./static/js/main.256f610c.chunk.js"
+    "revision": "1595b8fc720f448538ec",
+    "url": "./static/js/main.d548ddc3.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2737bcbbfc88eaa92c1f27b337193b53",
     "url": "./static/media/noun_Gryffindor.2737bcbb.svg"
+  },
+  {
+    "revision": "78cb5357573b08e8058664b915680c47",
+    "url": "./static/media/noun_HarryPotter.78cb5357.png"
   },
   {
     "revision": "41465dbe8b69728e9fac2a71d9253360",
