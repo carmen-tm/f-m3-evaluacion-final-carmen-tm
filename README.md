@@ -67,7 +67,7 @@ This project is licensed under the [MIT License](https://en.wikipedia.org/wiki/M
 
 ## TODO List (extra)
 
-- [] Improve loading component
+- [x] Improve loading component
 - [] Try more filters (for example: families with checkboxs)
 - [] Improve filter logic (if no results, show a message)
 - [] Buttons for next/prev character
