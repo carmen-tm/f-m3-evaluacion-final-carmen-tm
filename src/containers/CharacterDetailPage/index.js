@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Loading from '../../components/Loading';
+import getHouseLogo from '../../services/getHouseLogo';
 
 import './styles.scss';
 
@@ -71,6 +72,11 @@ class CharacterDetailPage extends React.Component {
 									? getSelectedCharacter(characterId).house
 									: '(No data)'}
 							</p>
+							<img
+								className="detail-main__house"
+								src={getHouseLogo(getSelectedCharacter(characterId).house)}
+								alt={getSelectedCharacter(characterId).house}
+							/>
 							<div>
 								<span>
 									<FontAwesomeIcon icon="birthday-cake" />
