@@ -10,9 +10,9 @@ TODO (General)
 - [x] Make filters logic
 - [x] Add components diagram
 - [x] Styles, favicon, fonts etc
+- [x] Update components diagram with last version
 - [ ] Improve filter logic (if no results, show a message)
 - [] Review code and clean
-- [] Update components diagram with last version
 - [] Clean README
 
 TODO (extra)
@@ -62,8 +62,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Components workflow diagram
 
-![DIAGRAM](/src/images/HarryPotterWebApp-diagram_v01.png)
-[link to diagram](https://creately.com/diagram/jw3pl27b1/b7NK5ZzRbniyFhGDOjMo6tPoGA%3D)
+![DIAGRAM](/src/images/HarryPotterWebApp-diagram_v02.png)
+[link to diagram](https://creately.com/diagram/jw3pl27b1)
 
 ## License
 
