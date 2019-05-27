@@ -1,17 +1,15 @@
+@import '../../scss/variables';
+
 //Forcing fixed position to fix detail page scrollX issue
 .App__detail {
 	position: fixed;
 	width: 100%;
 	margin-top: 30px;
-	// overflow-y: scroll !important;
 }
 
 .detail__header {
 	width: 190px;
-
-	// margin-left: 30px;
-	// transform: skewX(-30deg);
-	background-color: black;
+	background-color: $color-neutral-1000;
 	margin-bottom: 50px;
 }
 
@@ -28,21 +26,15 @@
 
 .animation-container {
 	display: inline-block;
-	// transition: all ease 600ms;
+	animation: 1.5s flip forwards;
+	animation-delay: 1s;
 
-	&:hover {
-		// transform: rotateY(180deg);
-
-		animation: 600ms flip forwards;
-
-		@keyframes flip {
-			from {
-				// transform: perspective(400px) rotateY(0deg);
-				transform: perspective(400px) rotateY(0deg);
-			}
-			to {
-				transform: perspective(400px) rotateY(369deg);
-			}
+	@keyframes flip {
+		from {
+			transform: perspective(400px) rotateY(0deg);
+		}
+		to {
+			transform: perspective(400px) rotateY(369deg);
 		}
 	}
 }
@@ -50,6 +42,7 @@
 .detail-main__image {
 	margin: 0 auto;
 	height: 400px;
+
 	//Similar to bcg-position controls, but with image tag
 	object-fit: cover;
 	object-position: top;
@@ -57,7 +50,7 @@
 
 ////////
 .title__container {
-	background-color: black;
+	background-color: $color-neutral-1000;
 	height: 80px;
 	transform: skewX(-30deg) rotate(-5deg);
 	margin-bottom: 30px;
@@ -73,12 +66,11 @@
 	font-size: 46px;
 	padding-top: 5px;
 	text-align: center;
-	color: white;
+	color: $color-neutral-0;
 	transform: skewX(30deg) rotate(5deg);
 }
 
 .detail-main {
-	// background-color: white;
 	width: 100%;
 	max-width: 1200px;
 	margin: 30px;
@@ -94,9 +86,6 @@
 			flex-basis: 250px;
 		}
 		margin-right: 50px;
-	}
-	&__section-right {
-		// background-color: yellow;
 	}
 }
 

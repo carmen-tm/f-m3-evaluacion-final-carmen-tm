@@ -1,10 +1,12 @@
+@import '../../scss/variables';
+
 .character-card__link {
 	text-decoration: none;
 	color: inherit;
 }
 
 .character-card {
-	background-color: white;
+	background-color: $color-neutral-0;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	margin: 0 10px;
 	padding-bottom: 10px;
@@ -30,8 +32,7 @@
 		height: 50px;
 		object-fit: cover;
 		object-position: top;
-		border: 1px solid white;
-		// outline: none;
+		border: 1px solid $color-neutral-0;
 	}
 
 	.character-card__house-animation {
@@ -39,7 +40,6 @@
 		transform: translateY(-40px);
 		transition: all ease 600ms;
 	}
-
 	transition: all ease 600ms;
 
 	&:hover {

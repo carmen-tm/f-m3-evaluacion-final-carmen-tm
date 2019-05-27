@@ -3,6 +3,7 @@ import fetchCharacter from '../../services/API-service';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from '../../containers/HomePage';
 import CharacterDetailPage from '../../containers/CharacterDetailPage';
+
 import './App.scss';
 
 class App extends React.Component {

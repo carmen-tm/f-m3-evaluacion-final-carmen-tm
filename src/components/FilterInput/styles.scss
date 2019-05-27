@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .visually-hidden {
 	// takes the element out of flow
 	position: absolute;
@@ -20,8 +22,7 @@
 .filter-input {
 	border: 0;
 	padding: 2px;
-	border-bottom: 1px solid black;
-	// border-bottom: 2px solid white;
+	border-bottom: 1px solid $color-neutral-1000;
 	background-color: inherit;
 	width: 60px;
 	transition: all 1s ease-in;

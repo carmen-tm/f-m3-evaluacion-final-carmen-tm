@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .App__header {
 	position: fixed;
 	margin-top: 30px;
@@ -5,7 +7,7 @@
 
 	left: 50%;
 	transform: translate(-50%, 0%) skewX(-30deg) rotate(-5deg);
-	background-color: black;
+	background-color: $color-neutral-1000;
 }
 .App__title {
 	font-family: 'magic_school_oneregular';
@@ -16,6 +18,6 @@
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	padding: 5px 20px;
-	color: white;
+	color: $color-neutral-0;
 	transform: skewX(30deg) rotate(5deg);
 }

@@ -5,9 +5,6 @@ import CharactersList from '../../components/CharactersList';
 import Loading from '../../components/Loading';
 import './styles.scss';
 
-window.scrollTo(500, 500);
-// window.scroll({ top: 0, left: 500, behavior: 'smooth' });
-
 //Replace vertical scroll by horizontal scroll with just vanilla javascript
 function handleReplaceVerticalScroll(event) {
 	// The deltaY property returns a positive value when scrolling down, and a negative value when scrolling up, otherwise 0
