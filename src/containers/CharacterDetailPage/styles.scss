@@ -1,11 +1,14 @@
 //Forcing fixed position to fix detail page scrollX issue
 .App__detail {
 	position: fixed;
+	width: 100%;
+	margin-top: 30px;
+	// overflow-y: scroll !important;
 }
 
 .detail__header {
 	width: 190px;
-	margin-top: 30px;
+
 	// margin-left: 30px;
 	// transform: skewX(-30deg);
 	background-color: black;
@@ -14,14 +17,34 @@
 
 .detail__title {
 	font-family: 'magic_school_oneregular';
-	font-size: 66px;
+	font-size: 36px;
 	font-weight: normal;
 	font-style: normal;
 	text-decoration: none;
 	-webkit-font-smoothing: antialiased;
 	padding: 5px 20px;
-	color: white;
-	// transform: skewX(30deg);
+	color: inherit;
+}
+
+.animation-container {
+	display: inline-block;
+	// transition: all ease 600ms;
+
+	&:hover {
+		// transform: rotateY(180deg);
+
+		animation: 600ms flip forwards;
+
+		@keyframes flip {
+			from {
+				// transform: perspective(400px) rotateY(0deg);
+				transform: perspective(400px) rotateY(0deg);
+			}
+			to {
+				transform: perspective(400px) rotateY(369deg);
+			}
+		}
+	}
 }
 
 .detail-main__image {
@@ -33,10 +56,25 @@
 }
 
 ////////
-
+.title__container {
+	background-color: black;
+	height: 80px;
+	transform: skewX(-30deg) rotate(-5deg);
+	margin-bottom: 30px;
+}
 .character__title {
-	font-size: 26px;
-	padding-bottom: 20px;
+	font-family: 'magic_school_oneregular';
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.4;
+
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 46px;
+	padding-top: 5px;
+	text-align: center;
+	color: white;
+	transform: skewX(30deg) rotate(5deg);
 }
 
 .detail-main {
@@ -44,20 +82,18 @@
 	width: 100%;
 	max-width: 1200px;
 	margin: 30px;
+	line-height: 2;
 
-	@media all and (min-width: 768px) {
+	@media all and (min-width: 320px) {
 		display: flex;
-		// margin: 0 auto;
-		left: 50%;
-		transform: translate(50%, 0%);
+		justify-content: center;
 	}
 
 	&__aside-left {
-		@media all and (min-width: 768px) {
+		@media all and (min-width: 320px) {
 			flex-basis: 250px;
 		}
 		margin-right: 50px;
-		background-color: pink;
 	}
 	&__section-right {
 		// background-color: yellow;
@@ -69,5 +105,38 @@
 	height: 50px;
 	object-fit: cover;
 	object-position: top;
-	// border: 0;
+	margin-bottom: 10px;
+}
+
+.detail-main__animation-big {
+	margin-top: 8px;
+	position: absolute;
+	animation: 1s slide-left-big forwards;
+
+	@keyframes slide-left-big {
+		from {
+			opacity: 0;
+			transform: translateX(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(60px);
+		}
+	}
+}
+
+.detail-main__animation {
+	position: absolute;
+	animation: 1s slide-left forwards;
+
+	@keyframes slide-left {
+		from {
+			opacity: 0;
+			transform: translateX(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(30px);
+		}
+	}
 }

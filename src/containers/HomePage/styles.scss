@@ -1,15 +1,15 @@
 .App__header {
 	position: fixed;
 	margin-top: 30px;
-	width: 400px;
+	width: 320px;
 
 	left: 50%;
-	transform: translate(-50%, 0%) skewX(-30deg);
+	transform: translate(-50%, 0%) skewX(-30deg) rotate(-5deg);
 	background-color: black;
 }
 .App__title {
 	font-family: 'magic_school_oneregular';
-	font-size: 66px;
+	font-size: 60px;
 	font-weight: normal;
 	font-style: normal;
 	text-align: center;
@@ -17,5 +17,5 @@
 	-webkit-font-smoothing: antialiased;
 	padding: 5px 20px;
 	color: white;
-	transform: skewX(30deg);
+	transform: skewX(30deg) rotate(5deg);
 }

@@ -14,9 +14,19 @@ import {
 	faSkull,
 	faSkullCrossbones,
 	faScroll,
-	faBirthdayCake
+	faPlus,
+	faBirthdayCake,
+	faMagic
 } from '@fortawesome/free-solid-svg-icons';
-library.add(faHeart, faSkull, faSkullCrossbones, faScroll, faBirthdayCake);
+library.add(
+	faHeart,
+	faSkull,
+	faSkullCrossbones,
+	faScroll,
+	faPlus,
+	faBirthdayCake,
+	faMagic
+);
 
 class CharacterDetailPage extends React.Component {
 	componentWillUnmount() {
@@ -33,18 +43,29 @@ class CharacterDetailPage extends React.Component {
 			return dataArr.find(character => character.id === parseInt(characterId));
 		};
 
+		const nextCharacter = parseInt(characterId) + 1;
+		const prevCharacter = parseInt(characterId) - 1;
+
+		const iconRotated = {
+			transform: 'rotate(45deg)'
+		};
+
 		//Another way
 		// const selectedCharacter = dataArr[characterId - 1];
 
 		return (
 			<div className="App__detail">
-				<header className="detail__header">
+				<header>
 					<Link
 						to="/"
 						className="detail__title"
 						title="Back to the Characters list"
 					>
-						{'...Home'}
+						<div className="animation-container">
+							<span className="detail__title-icon"> {'<'} </span>
+						</div>
+
+						<span className="detail__title-text"> Home</span>
 					</Link>
 				</header>
 				{isFetching ? (
@@ -59,19 +80,28 @@ class CharacterDetailPage extends React.Component {
 								alt={getSelectedCharacter(characterId).name}
 							/>
 						</aside>
+
 						<section className="detail-main__section-right">
-							<header>
+							<header className="title__container">
 								<h2 className="character__title">
 									{getSelectedCharacter(characterId).name}
 								</h2>
 							</header>
-							{/* <h3>{getSelectedCharacter(characterId).name}</h3> */}
-							<p>
-								House:{' '}
-								{getSelectedCharacter(characterId).house
-									? getSelectedCharacter(characterId).house
-									: '(No data)'}
-							</p>
+
+							<h3 className="detail-main__animation-big">
+								{getSelectedCharacter(characterId).house ? (
+									getSelectedCharacter(characterId).house
+								) : (
+									<div>
+										<FontAwesomeIcon
+											icon="plus"
+											style={iconRotated}
+											title="No data"
+										/>
+									</div>
+								)}
+							</h3>
+
 							<img
 								className="detail-main__house"
 								src={getHouseLogo(getSelectedCharacter(characterId).house)}
@@ -79,24 +109,48 @@ class CharacterDetailPage extends React.Component {
 							/>
 							<div>
 								<span>
-									<FontAwesomeIcon icon="birthday-cake" />
+									<FontAwesomeIcon icon="birthday-cake" /> Date of Birth:
 								</span>
-								<span> Date of Birth: </span>
-								{getSelectedCharacter(characterId).dateOfBith
-									? getSelectedCharacter(characterId).dateOfBith
-									: '(No data)'}
+								<span className="detail-main__animation">
+									{getSelectedCharacter(characterId).dateOfBith ? (
+										getSelectedCharacter(characterId).dateOfBith
+									) : (
+										<div>
+											<FontAwesomeIcon
+												icon="plus"
+												style={iconRotated}
+												title="No data"
+											/>
+										</div>
+									)}
+								</span>
 							</div>
-							<p>
-								Patronus:{' '}
-								{getSelectedCharacter(characterId).patronus
-									? getSelectedCharacter(characterId).patronus
-									: '(No data)'}
-							</p>
+
+							<div>
+								<span>
+									<FontAwesomeIcon icon="magic" /> Patronus:{' '}
+								</span>
+								<span className="detail-main__animation">
+									{getSelectedCharacter(characterId).patronus ? (
+										getSelectedCharacter(characterId).patronus
+									) : (
+										<div>
+											<FontAwesomeIcon
+												icon="plus"
+												style={iconRotated}
+												title="No data"
+											/>
+										</div>
+									)}
+								</span>
+							</div>
 							{/* <span className="awesome-font">
 								<FontAwesomeIcon icon="heart" />
 								<FontAwesomeIcon icon="scroll" />
 								<FontAwesomeIcon icon="birthday-cake" />
+								<FontAwesomeIcon icon="magic" />
 								<FontAwesomeIcon icon="skull-crossbones" />
+								<FontAwesomeIcon icon="plus" style={iconRotated} />
 								<FontAwesomeIcon icon="skull" />
 							</span> */}
 							<div>
@@ -105,7 +159,10 @@ class CharacterDetailPage extends React.Component {
 										<span>
 											<FontAwesomeIcon icon="heart" />
 										</span>
-										<span> Alive at the end of the saga</span>
+										<span className="detail-main__animation">
+											{' '}
+											Alive at the end of the saga
+										</span>
 									</div>
 								) : (
 									<div>
@@ -116,11 +173,19 @@ class CharacterDetailPage extends React.Component {
 									</div>
 								)}
 							</div>
-							{/* <p>
-								{getSelectedCharacter(characterId).alive
-									? 'Alive at the end of the saga'
-									: 'Dead at the end of the saga'}
-							</p> */}
+
+							{/* <Link
+								to={`/character-detail/${nextCharacter}`}
+								title="Back to the Characters list"
+							>
+								{`Next Character >`}
+							</Link>
+							<Link
+								to={`/character-detail/${nextCharacter}`}
+								title="Back to the Characters list"
+							>
+								{`< Previous Character`}
+							</Link> */}
 						</section>
 					</main>
 				)}
