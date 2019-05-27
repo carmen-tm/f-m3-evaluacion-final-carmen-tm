@@ -1,7 +1,15 @@
 .loading-page {
-	width: 100%;
 	min-height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.loading-image {
+	width: 300px;
+}
+
+.loading-text {
+	font-size: 24px;
 }

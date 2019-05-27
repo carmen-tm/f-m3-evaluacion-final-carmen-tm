@@ -67,9 +67,9 @@ This project is licensed under the [MIT License](https://en.wikipedia.org/wiki/M
 
 ## TODO List (extra)
 
-- [] Improve filter logic (if no results, show a message)
-- [] Try more filters (for example: families with checkboxs)
 - [] Improve loading component
+- [] Try more filters (for example: families with checkboxs)
+- [] Improve filter logic (if no results, show a message)
 - [] Buttons for next/prev character
 - [] Mediaqueries for mobile size (simple flex, not horizontal scroll)
 - [] Implement Modules CSS
