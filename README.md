@@ -11,12 +11,12 @@ TODO (General)
 - [x] Add components diagram
 - [x] Styles, favicon, fonts etc
 - [x] Update components diagram with last version
-- [ ] Improve filter logic (if no results, show a message)
 - [] Review code and clean
 - [] Clean README
 
 TODO (extra)
 
+- [] Improve filter logic (if no results, show a message)
 - [] Try more filters (for example: families with checkboxs)
 - [] Improve loading component
 - [] Buttons for next/prev character
